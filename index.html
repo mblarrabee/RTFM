@@ -9,8 +9,24 @@
     </head>
     
     <body ng-controller="mainCtrl">
+        <form ng-sumbit="register()">
+            Register New User: </br>
+            Email: <input type="text" placeholder="email" ng-model="newEmail">
+            </br>
+            Username: <input type="text" placeholder="username" ng-model="newUsername"></html>
+            </br>    
+            Password: <input type="password" placeholder="password" ng-model="newPassword">
+            </br>
+            <button ng-click="register()">Register</button>
+
+        </form>
+</br>
+        <form ng-submit="login()">
+            Login: <input type="text" placeholder="email" ng-model="email">
+            Password: <input type="password" placeholder="password" ng-model="password">
+            <button>Login</button>
+        </form>
         
-        home
         <div class="container" ng-view>
         
         </div>
@@ -31,6 +47,7 @@
         <script src="js/threads/threadsService.js"></script>
         <script src="js/thread/threadCtrl.js"></script>
         <script src="js/thread/threadTmpl.html"></script>
+        <script src="js/authService.js"></script>
         
     </body>
 
